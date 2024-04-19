@@ -4,6 +4,11 @@ const port = 3001
 const db = require('./db')
 let sql
 
+const cors = require('cors')
+app.use(cors({
+    origin: 'http://localhost:3000'
+}))
+
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 
